@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import { InputData } from "./components/InputData";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [takakirecord, setTakakiRecord] = useState(0);
+  const [takashirecord, setTakashiRecord] = useState(0);
+  const [coperecord, setCopeRecord] = useState(0);
+  const [records, setRecords] = useState([]);
 
+  const onChangeTakakiresult = (e) => {
+    const value = e.target.value;
+    setTakakiRecord(parseInt(value, 10) || 0);
+  };
+
+  const onChangeTakashiresult = (e) => {
+    const value = e.target.value;
+    setTakashiRecord(parseInt(value, 10) || 0);
+  };
+
+  const onChangecoperesult = (e) => {
+    const value = e.target.value;
+    setCopeRecord(parseInt(value, 10) || 0);
+  };
+
+  const registerbuttn = () => {
+    const newRecord =////////
+  }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <InputData
+        takakirecord={takakirecord}
+        takashirecord={takashirecord}
+        coperecord={coperecord}
+        onChangeTakakiresult={onChangeTakakiresult}
+        onChangeTakashiresult={onChangeTakashiresult}
+        onChangecoperesult={onChangecoperesult}
+        registerbuttn={registerbuttn}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
