@@ -1,24 +1,15 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { InputData } from "./components/InputData";
 import { supabase } from "../supabaseClient";
 import { PokerRecord } from "./components/PokerRecord";
 import { UserContext } from "./providers/provider";
+import { Router } from "./router/Router";
 
 function App() {
-  const {
-    setTakakiRecord,
-    setTakashiRecord,
-    setCopeRecord,
-    records,
-    setRecords,
-    error,
-    setError,
-    loading,
-    setLoading,
-  } = useContext(UserContext);
+  const { records, setRecords, error, setError, loading, setLoading } =
+    useContext(UserContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,15 +28,8 @@ function App() {
 
   return (
     <div>
-      {loading ? (
-        <p>♠ ♣ ♥ ♦</p>
-      ) : (
-        <div>
-          <InputData />
-          {error}
-          <PokerRecord records={records} />
-        </div>
-      )}
+      <Router />
+      {loading ? <p>♠ ♣ ♥ ♦</p> : <div>{error}</div>}
     </div>
   );
 }
