@@ -6,7 +6,7 @@ export const InputData = (props) => {
     onChangeTakakiresult,
     onChangeTakashiresult,
     onChangecoperesult,
-    registerbuttn,
+    registerbutton,
   } = props;
   return (
     <div>
@@ -34,7 +34,7 @@ export const InputData = (props) => {
           onChange={onChangecoperesult}
         />
       </p>
-      <button onClick={registerbuttn}>登録</button>
+      <button onClick={registerbutton}>登録</button>
     </div>
   );
 };
