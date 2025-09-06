@@ -20,7 +20,7 @@ const SHeader = styled.header`
   align-items: center;
   padding: 8px 0px;
   color: white;
-   gap: 50px
+   gap: 5px
 `;
 
 const SLink = styled(Link)`
