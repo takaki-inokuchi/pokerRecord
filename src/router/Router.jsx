@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { DefaultLayout } from "../templates/DefaultLayout";
 import { Top } from "../Pages/Top";
 import { Results } from "../Pages/Results";
@@ -15,6 +15,7 @@ export const Router = () => {
           <Route path="/Rate" element={<Rate />} />
           <Route path="/Graph" element={<Graph />} />
         </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );

@@ -13,6 +13,7 @@ export const RegisterButton = () => {
     records,
     setRecords,
     setError,
+    error,
   } = useContext(UserContext);
 
   const handleRegister = async () => {
@@ -25,6 +26,9 @@ export const RegisterButton = () => {
       setTakashiRecord("");
       setCopeRecord("");
       return setError("間違っています。");
+    }
+    if (takakiNum == 0 && takashiNum == 0 && copeNum == 0) {
+      return setError("入力されていません。");
     }
     const newRecord = {
       takaki: takakiNum,
@@ -43,10 +47,14 @@ export const RegisterButton = () => {
       setTakakiRecord("");
       setTakashiRecord("");
       setCopeRecord("");
-      setError("");
+      setError("記録しました");
     }
   };
 
-  
-  return(<button onClick={handleRegister}>登録</button>);
+  return (
+    <div>
+      <button onClick={handleRegister}>登録</button>
+      <div>{error}</div>
+    </div>
+  );
 };

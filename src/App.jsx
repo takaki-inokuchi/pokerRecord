@@ -3,13 +3,11 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { supabase } from "../supabaseClient";
-import { PokerRecord } from "./components/PokerRecord";
 import { UserContext } from "./providers/provider";
 import { Router } from "./router/Router";
 
 function App() {
-  const { records, setRecords, error, setError, loading, setLoading } =
-    useContext(UserContext);
+  const { setRecords, setError, loading, setLoading } = useContext(UserContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,8 +26,13 @@ function App() {
 
   return (
     <div>
-      <Router />
-      {loading ? <p>♠ ♣ ♥ ♦</p> : <div>{error}</div>}
+      {loading ? (
+        <p>♠ ♣ ♥ ♦</p>
+      ) : (
+        <>
+          <Router />
+        </>
+      )}
     </div>
   );
 }
