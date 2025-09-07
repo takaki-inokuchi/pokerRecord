@@ -6,7 +6,7 @@ export const Header = () => {
     <SHeader>
       <SLink to="/">入力</SLink>
       <SLink to="/Results">記録</SLink>
-      <SLink to="/Graph">グラフ</SLink>
+      <SLink to="/PokerGraph">グラフ</SLink>
       <SLink to="/Rate">勝率</SLink>
     </SHeader>
   );

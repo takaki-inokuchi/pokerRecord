@@ -3,7 +3,7 @@ import { DefaultLayout } from "../templates/DefaultLayout";
 import { Top } from "../Pages/Top";
 import { Results } from "../Pages/Results";
 import { Rate } from "../Pages/Rate";
-import { Graph } from "../Pages/graph";
+import { PokerGraph } from "../Pages/PokerGraph";
 
 export const Router = () => {
   return (
@@ -13,7 +13,7 @@ export const Router = () => {
           <Route path="/" element={<Top />} />
           <Route path="/Results" element={<Results />} />
           <Route path="/Rate" element={<Rate />} />
-          <Route path="/Graph" element={<Graph />} />
+          <Route path="/PokerGraph" element={<PokerGraph />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
