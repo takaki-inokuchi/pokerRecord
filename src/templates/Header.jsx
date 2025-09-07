@@ -27,7 +27,7 @@ const SLink = styled(Link)`
   text-decoration: none;
   background-color: transparent;
   transition: background 0.3s;
-  margin: 20px;
+  margin: 21px;
   color: white;
   
 `;
