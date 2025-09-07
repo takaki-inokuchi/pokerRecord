@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a2540;
+  color: #ffffff;
+  font-family: "Roboto", "Arial", sans-serif;
+  overflow-x: hidden; /* 横スクロール禁止 */
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

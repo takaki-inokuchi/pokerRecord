@@ -5,9 +5,10 @@ import "./App.css";
 import { supabase } from "../supabaseClient";
 import { UserContext } from "./providers/provider";
 import { Router } from "./router/Router";
+import styled from "styled-components";
 
 function App() {
-  const { setRecords, setError, loading, setLoading } = useContext(UserContext);
+  const { setRecords, setError, setLoading } = useContext(UserContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,16 +26,21 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {loading ? (
-        <p>♠ ♣ ♥ ♦</p>
-      ) : (
-        <>
-          <Router />
-        </>
-      )}
-    </div>
+    <MainContainer>
+      <Router />
+    </MainContainer>
   );
 }
 
 export default App;
+
+const MainContainer = styled.div`
+  max-width: 900px;
+  width: 100%;
+  background-color: #0f3460;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  padding: 20px;
+  margin-top: 20px;
+  margin: 0 auto;
+`;

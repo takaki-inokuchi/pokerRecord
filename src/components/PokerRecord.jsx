@@ -16,9 +16,9 @@ export const PokerRecord = (props) => {
         {records.map((record, index) => (
           <tr key={index}>
             <STd>{index + 1}回目</STd>
-            <STd>たかき{record.takaki}$</STd>
-            <STd>たかし{record.takashi}$</STd>
-            <STd>こーぺ{record.cope}$</STd>
+            <STd>{record.takaki}円</STd>
+            <STd>{record.takashi}円</STd>
+            <STd>{record.cope}円</STd>
           </tr>
         ))}
       </tbody>

@@ -8,9 +8,9 @@ export const TotalData = (props) => {
   return (
     <Stable>
       <STh>合計</STh>
-      <STd>たかき{totalTakaki}円</STd>
-      <STd>たかし{totalTakashi}円</STd>
-      <STd>こーぺ{totalCope}円</STd>
+      <STd>たかき<br />{`${totalTakaki}円`}</STd>
+      <STd>たかし<br />{`${totalTakashi}円`}</STd>
+      <STd>こーぺ<br />{`${totalCope}円`}</STd>
     </Stable>
   );
 };
@@ -23,10 +23,12 @@ border-collapse: collapse;
 `
 
 const STh = styled.th`
-  border: 1px solid #ccc;
+  border: 1px solid #ffffffff;
   padding: 8px;
-  background-color: #f0f0f0;
-`;
+  background-color: #0a203aff;
+   text-align: center; 
+   vertical-align: middle;
+  `;
 
 const STd = styled.td`
   border: 1px solid #ccc;

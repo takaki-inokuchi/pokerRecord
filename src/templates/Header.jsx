@@ -15,12 +15,13 @@ export const Header = () => {
 const SHeader = styled.header`
   display: flex;
   width: 100%;
-   justify-content: center;
-  background-color: #0a2540;
+  justify-content: center;
+  background-color: #3c3eb4ff;
   align-items: center;
   padding: 8px 0px;
   color: white;
-   gap: 50px
+  gap: 0px;
+  flex-wrap: nowrap;
 `;
 
 const SLink = styled(Link)`
@@ -29,5 +30,4 @@ const SLink = styled(Link)`
   transition: background 0.3s;
   margin: 21px;
   color: white;
-  
 `;

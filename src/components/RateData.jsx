@@ -48,12 +48,13 @@ export const RateData = () => {
 
 // Styled components
 const Container = styled.div`
-  width: 100%;
-  max-width: 400px;
+  width: 90%;
+  max-width: 500px;
   margin: 20px auto;
   padding: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  background-color: #1f3b6d;
 `;
 
 const RateRow = styled.div`

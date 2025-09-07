@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "../providers/provider";
-import { RegisterButton } from "../Button/RegiterButton";
+import { ButtonDesign } from "../Button/ButtonDesign";
 
 export const InputData = (props) => {
   const { setTakakiRecord, setTakashiRecord, setCopeRecord } =
@@ -26,7 +26,8 @@ export const InputData = (props) => {
     }
   };
 
-  const { takakirecord, takashirecord, coperecord } = useContext(UserContext);
+  const { takakirecord, takashirecord, coperecord, error } =
+    useContext(UserContext);
 
   return (
     <div>
@@ -54,7 +55,9 @@ export const InputData = (props) => {
           onChange={onChangecoperesult}
         />
       </p>
-      <RegisterButton />
+      <div>{error}</div>
+
+      <ButtonDesign />
     </div>
   );
 };
