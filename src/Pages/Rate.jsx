@@ -1,3 +1,9 @@
+import { RateData } from "../components/RateData";
+
 export const Rate = () => {
-  return <div>sss</div>;
+  return (
+    <div>
+      <RateData />
+    </div>
+  );
 };
